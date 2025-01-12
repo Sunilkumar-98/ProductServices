@@ -14,7 +14,7 @@ public class FakeStoreProductService implements ProductService {
         http://fakestoreapi.com/products/ + id
          */
         // to call 3rd party api rest template is used
-        String url = "http://fakestoreapi.com/products/"+ id;
+        String url = "https://fakestoreapi.com/products/"+ id;
         RestTemplate restTemplate = new RestTemplate();
     FakeStoryProductDto fakeStoryProductDto=  restTemplate.getForObject(url, FakeStoryProductDto.class);
 
@@ -28,7 +28,5 @@ public class FakeStoreProductService implements ProductService {
         product.setName(dto.getTitle());
         return product;
 
-
     }
-
 }

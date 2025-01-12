@@ -16,9 +16,9 @@ public class ProductController {
     private ProductService productService;
     //GET/product{id}
     @GetMapping("/products/{id}")
-    public ResponseEntity<Product> getProductsById(@PathVariable("id") long productId) {
-        if(productId < 1 || productId >20 ){
-        return new ResponseEntity<>(HttpStatusCode.valueOf(400));
+    public ResponseEntity<Product> getProductById(@PathVariable("id") long productId) {
+       if(productId < 1 || productId >20 ){
+       return new ResponseEntity<>(HttpStatusCode.valueOf(400));
         }
        Product product = productService.getProductById(productId);
         return new ResponseEntity<>(product,HttpStatusCode.valueOf(200)) ;
