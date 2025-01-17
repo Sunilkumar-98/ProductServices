@@ -1,5 +1,7 @@
 package com.example.ProductServices.dtos;
 
+import java.util.List;
+
 public class FakeStoryProductDto {
 
     long id;
@@ -8,6 +10,7 @@ public class FakeStoryProductDto {
     String description;
     String category;
     String image;
+    List<Integer> list;
 
     public long getId() {
         return id;

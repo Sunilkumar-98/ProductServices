@@ -1,37 +1,51 @@
 package com.example.ProductServices.models;
 
+
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
-@Setter
+@Entity
 public class Product {
 
-    String name;
-    String category;
-    String description;
+  @Id
+  private long id;
 
-    public String getName() {
-        return name;
-    }
+  private String name;
+  private String category;
+  private String description;
 
-    public void setName(String name) {
-        this.name = name;
-    }
+  public String getName() {
+    return name;
+  }
 
-    public String getCategory() {
-        return category;
-    }
+  public void setName(String name) {
+    this.name = name;
+  }
 
-    public void setCategory(String category) {
-        this.category = category;
-    }
+  public String getCategory() {
+    return category;
+  }
 
-    public String getDescription() {
-        return description;
-    }
+  public void setCategory(String category) {
+    this.category = category;
+  }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
+  public String getDescription() {
+    return description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
+  public long getId() {
+    return id;
+  }
+
+  public void setId(long id) {
+    this.id = id;
+  }
 }
